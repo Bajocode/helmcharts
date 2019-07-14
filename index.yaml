@@ -2,12 +2,11 @@ apiVersion: v1
 entries:
   k8s-webhook:
   - apiVersion: v1
-    appVersion: "1.0"
-    created: "2019-07-14T07:13:54.188602+02:00"
+    created: "2019-07-14T08:04:40.208567+02:00"
     description: A Helm chart for Kubernetes
-    digest: 7e0a53025ee3ac961ab990bc68251cfbe54bc0ae96555ed518bc1a062f6180f7
+    digest: 6e40148239b24758582303e93bc97658e28f1552c07ae02dcf8fb8a9f8534b03
     name: k8s-webhook
     urls:
     - https://bajocode.github.io/helmcharts/k8s-webhook-0.1.0.tgz
     version: 0.1.0
-generated: "2019-07-14T07:13:54.187906+02:00"
+generated: "2019-07-14T08:04:40.207792+02:00"
