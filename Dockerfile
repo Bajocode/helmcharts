@@ -1,14 +1,3 @@
-# k8s-webhook
-
-## Components
-* predefined git webhooks
-* custom webhooks and actions: https://github.com/adnanh/webhook
-
-## Be aware of
-* RBAC permission to pull, push
-
-### Dockerfile
-```Dockerfile
 FROM        golang:alpine3.10 AS builder
 LABEL       maintainer="Fabijan Bajo <bajo09@gmail.com>"
 ARG         WEBHOOK_VERSION="2.6.9"
@@ -35,24 +24,3 @@ WORKDIR     /usr/local/bin
 COPY        --chown=appuser:appgroup --from=builder /usr/local/bin/ .
 EXPOSE      9000/tcp
 ENTRYPOINT  ["./webhook"]
-```
-
-## Out of the box
-
-### Git Webhooks
-* github
-  * webhook secret
-* gitlab
-  *  
-
-### Pipeline
-* clone with alpine/git: https://hub.docker.com/r/alpine/git/
-* build with Makisu 🍣: https://github.com/uber/makisu
-  * or kaniko, or buildkit
-* deploy with Helm: https://helm.sh/
-
-### Or Tekton pipelines
-
-## Custom Webhooks
-* webhook yaml configmap
-* script inline or file
